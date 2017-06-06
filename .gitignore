@@ -1,0 +1,6 @@
+# Compiler-generated files
+*.exe
+*.o
+
+# Course information directory
+/info/
