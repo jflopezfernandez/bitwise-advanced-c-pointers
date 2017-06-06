@@ -1,19 +1,27 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <inttypes.h>
 
 
 int main()
 {
-    int num;
-    int *numPtr;
-    int num2;
+	system("cls");
 
-    num = 100;
-    numPtr = &num;
-    num2 = *numPtr;
+	char *s;
+	int i = sizeof("hello");
+	s = (char *) malloc(i);
 
-    printf("num=%d, numPtr=%d, address of num=%d, num2=%d\n", num, *numPtr, num, num2);
+	strncpy(s, "hello", i);
+	printf("s is %s\n", s);
 
+	realloc(s, 12);
+	strncpy(s, "hello", i);
+	strcat(s, " world");
+
+	printf("s is now %s\n", s);
+
+	free(s);
     return EXIT_SUCCESS;
 }
