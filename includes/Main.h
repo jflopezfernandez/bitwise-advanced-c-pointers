@@ -2,6 +2,7 @@
 #define _MAIN_H
 
 
+
 void clearScreen();
 
 void initializeProgram();
